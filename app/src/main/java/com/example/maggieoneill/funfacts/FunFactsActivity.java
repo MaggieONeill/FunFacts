@@ -45,17 +45,10 @@ public class FunFactsActivity extends AppCompatActivity {
                 String fact = "";
                 //randomly select a fact
                 Random randomGenerator = new Random();//construct a new random number generator
-                int randomNumber = randomGenerator.nextInt(3);
+                int randomNumber = randomGenerator.nextInt(facts.length);
 
-                 if(randomNumber == 0){
-                    fact = "Ants stretch when they wake up in the morning.";
-                 } else if (randomNumber == 1){
-                     fact = "Ostriches run faster than horses.";
-                 } else if (randomNumber == 2){
-                     fact = "Olympic gold medals are actually made mostly of silver.";
-                 } else {
-                     fact = "error";
-                 }
+                fact = facts[randomNumber];
+
 
 
                 //update the label with our dynamic fact
