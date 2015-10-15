@@ -27,7 +27,7 @@ public class FunFactsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //the button was clicked , so update the fact label with new fact
-                String fact = "Ostriches can run faster than horses.";
+                String fact = "";
                 factLabel.setText(fact);
             }
         };
