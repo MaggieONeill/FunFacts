@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Button;
+import java.util.Random;
 
 public class FunFactsActivity extends AppCompatActivity {
 
@@ -28,6 +29,12 @@ public class FunFactsActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //the button was clicked , so update the fact label with new fact
                 String fact = "";
+                //randomly select a fact
+                Random randomGenerator = new Random();//construct a new random number generator
+                int randomNumber = randomGenerator.nextInt(3);
+                fact =  randomNumber + "";
+
+                //update the label with our dynamic fact
                 factLabel.setText(fact);
             }
         };
